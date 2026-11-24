@@ -1,4 +1,16 @@
-Workflow - can be any name 
-job 
-steps 
-action 
+#workflow [No indentation required for naming workflow]
+name: Hello 
+
+#on tells when the workflow shoudl run (give indentaion by tab)
+on:
+  workflow_dispatch: 
+#job tell us what workflow should do there can be one or more than one jobs hence we write jobs branch_protection_rule: branch_protection_rule
+#job as object so no need indentation 
+jobs:
+  #1st job (give indentation) 
+  say-hello:
+    runs-on: ubuntu-latest
+    steps:
+      - name: say hello to everyone 
+        run: echo "hello dosto" 
+
